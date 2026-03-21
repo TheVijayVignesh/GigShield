@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GigShield | Delivery Partner Dashboard</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* Light mode (default) */
+            --bg-base: #F7F6F2;
+            --bg-card: #FFFFFF;
+            --text-primary: #1A1A2E;
+            --text-secondary: #5C5C7A;
+            --accent: #FF5C00;
+            --accent-light: #FFF0E8;
+            --border: #E8E6E0;
+            --success: #22C55E;
+            --warning: #F59E0B;
+        }
+
+        [data-theme="dark"] {
+            --bg-base: #0F0F14;
+            --bg-card: #1A1A24;
+            --text-primary: #F0EEE8;
+            --text-secondary: #9090A8;
+            --accent: #FF6B1A;
+            --accent-light: #2A1A10;
+            --border: #2A2A38;
+            --success: #22C55E;
+            --warning: #F59E0B;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-primary);
+            font-family: 'DM Sans', sans-serif;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Syne', sans-serif;
+        }
+
+        /* Custom scrollbar - thin, rounded, accent-colored */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-card);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--accent);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--text-primary);
+        }
+
+        /* Firefox scrollbar */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: var(--accent) var(--bg-card);
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+
+    <!-- Script imports (order matters) -->
+    <script src="src/app.js"></script>
+    <script src="src/pages/login.js"></script>
+    <script src="src/pages/verify.js"></script>
+    <script src="src/pages/dashboard.js"></script>
+    <script src="src/main.js"></script>
+</body>
+</html>
